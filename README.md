@@ -185,3 +185,165 @@ Para contribuir a este proyecto, por favor crea un fork y envía una solicitud d
 
 - [PABLO TORRES] - Desarrollo inicial
 
+# Informe: Árboles Binarios – Inserción, Inversión, Recorrido y Profundidad
+
+## 📌 Información General
+
+- **Título:** Árboles Binarios – Inserción, Inversión, Recorridos y Profundidad  
+- **Asignatura:** Estructura de Datos  
+- **Carrera:** Computación  
+- **Estudiante:** Carlos Antonio Gordillo Tenemaza  
+- **Correo institucional:** cgordillot@est.ups.edu.ec  
+- **Fecha:** 06/07/2025  
+- **Profesor:** Ing. Pablo Torres  
+
+---
+
+## 🛠️ Descripción
+
+Este proyecto en Java resuelve 4 ejercicios prácticos sobre **árboles binarios**, que permiten aplicar los conocimientos fundamentales de estructuras no lineales.  
+Las operaciones implementadas cubren:
+
+- Inserción en Árbol Binario de Búsqueda (BST)
+- Inversión de un árbol binario (modo espejo)
+- Recorrido por niveles (nivel por nivel)
+- Cálculo de profundidad máxima (altura del árbol)
+
+Cada ejercicio se ejecuta desde `App.java` y está organizado en carpetas separadas.
+
+---
+
+## 📂 Estructura del Código
+
+- `InsertBST.java`: inserta valores en un BST a partir de una lista de enteros.
+- `InvertBinaryTree.java`: invierte un árbol binario reflejando los hijos.
+- `ListLevels.java`: genera listas enlazadas para cada nivel del árbol.
+- `Depth.java`: calcula la profundidad máxima del árbol (camino más largo raíz-hoja).
+- `ArbolBinario.java`: permite imprimir gráficamente el árbol para facilitar la visualización.
+- `App.java`: ejecuta todos los ejercicios y muestra las salidas esperadas.
+- `student.env`: contiene nombre y correo del estudiante (validación automática).
+
+---
+
+## ✨ Funcionalidades por Ejercicio
+
+### ✅ Ejercicio 01 – Insertar en BST
+
+- Inserta elementos de una lista en un BST.
+- Muestra la raíz del árbol creado.
+- Utiliza lógica recursiva de inserción izquierda/derecha.
+
+### ✅ Ejercicio 02 – Invertir Árbol
+
+- Invierte un árbol binario de forma recursiva.
+- El árbol original se genera desde una lista de enteros.
+- Se muestra la raíz del árbol invertido.
+
+### ✅ Ejercicio 03 – Listar Niveles
+
+- Agrupa los nodos del árbol por niveles (nivel 0, nivel 1, ...).
+- Muestra en consola la distribución de cada nivel.
+- Admite cualquier estructura de árbol generada previamente.
+
+### ✅ Ejercicio 04 – Profundidad Máxima
+
+- Calcula la profundidad (altura) del árbol desde la raíz hasta la hoja más profunda.
+- Se imprime visualmente la estructura del árbol.
+- El cálculo se adapta a cualquier entrada dada por lista.
+
+---
+
+## 🖼️ Captura de Pantalla
+
+![Vista previa del proyecto](src/main/Imagen/Foto1.png)
+
+![Vista previa del proyecto](src/main/Imagen/Foto2.png)
+
+---
+
+## 🚀 Ejecución
+
+Para compilar y ejecutar el programa:
+
+1. Desde la carpeta raíz del proyecto, compila con:
+
+    ```bash
+    javac src/**/*.java -d bin
+    ```
+
+2. Luego ejecuta la clase principal:
+
+    ```bash
+    java -cp bin App
+    ```
+
+---
+
+## 🧑‍💻 Ejemplo de Entrada
+
+```plaintext
+===== EJERCICIO 01 =====
+Input: 5 3 7 2 4 6 8 
+Output:
+├── 5
+│   ├── 3
+│   │   ├── 2
+│   │   └── 4
+│   └── 7
+│       ├── 6
+│       └── 8
+
+Raiz BST: 5
+
+===== EJERCICIO 02 =====
+Input: 4 2 7 1 3 6 9 
+
+Arbol original:
+├── 4
+│   ├── 2
+│   │   ├── 1
+│   │   └── 3
+│   └── 7
+│       ├── 6
+│       └── 9
+
+Output:
+├── 4
+│   ├── 7
+│   │   ├── 9
+│   │   └── 6
+│   └── 2
+│       ├── 3
+│       └── 1
+
+Raiz invertido: 4
+
+===== EJERCICIO 03 =====
+Input: 4 2 7 1 3 6 9
+
+Arbol:
+├── 4
+│   ├── 2
+│   │   ├── 1
+│   │   └── 3
+│   └── 7
+│       ├── 6
+│       └── 9
+
+Nivel 0: 4
+Nivel 1: 2 -> 7
+Nivel 2: 1 -> 3 -> 6 -> 9
+
+===== EJERCICIO 04 =====
+Input: 4 2 7 1 3 8
+
+Arbol:
+├── 4
+│   ├── 2
+│   │   ├── 1
+│   │   │   ├── 8
+│   │   │   └── null
+│   │   └── 3
+│   └── 7
+
+Profundidad maxima: 4
